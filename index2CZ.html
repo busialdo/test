@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+   <link rel="stylesheet" href="style.css">
+
+   <link rel="icon" href="logo.png" type="image/png">
+
+   <title>FABAD-BETON</title>
+
+   <script>
+       if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+           document.documentElement.classList.add('dark');
+       } else {
+           document.documentElement.classList.remove('dark')
+       }
+   </script>
+
+</head>
+<body class="bg-white dark:bg-gray-900">
+
+                      <!-- Nawigacja -->
+
+                      <header>
+
+                       <nav class="left-0 z-20 w-full bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+                           <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                           <a href="indexCZ.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                               <img src="logo.png" class="h-12" alt="Logo" />
+                               <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">FABAD-BETON</span>
+                           </a>
+               
+                       <div>
+               
+                           <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5">
+                               <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                               <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                           </button>
+               
+                           <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+                               <span class="sr-only">OTEVŘENO</span>
+                               <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                               </svg>
+                           </button>
+                       </div>
+                           <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                               <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                               <li>
+                                   <a href="index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Domovská stránka</a>
+                               </li>
+                               <li>
+                                   <a href="index2.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Nabídka</a>
+                               </li>
+                               <li>
+                                   <a href="index3CZ.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Kontakt</a>
+                               </li>
+                               <li>
+                                <div>
+                                    <select id="language" class="dark:text-gray-400 dark:bg-gray-700 dark:gray-600" onchange="location = this.value;">
+                                        <option value="">Jazyk</option>
+                                        <option value="index2.html">polština</option>
+                                        <option value="index2CZ.html">čeština</option>
+                                    </select>
+                                </div>
+                            </li>
+                               </ul>
+                           </div>
+                           </div>
+                       </nav>
+               
+                   </header>
+
+
+                   <div id="cennik" class="text-gray-800 dark:text-gray-400"><h1>Ceník našich služeb:</h1></div>
+   
+
+
+              <!-- tabelka 1 -->
+   <main id="animacja2">               
+       <div class="relative overflow-x-auto pb-10">
+           <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+               
+                       <th scope="col" class="px-6 py-3">
+                        Třída betonu: PN-EN-2006-1
+                       </th>
+                       <th scope="col" class="px-6 py-3">
+                        Čistá cena (PLN/m3):
+                       </th>
+                       <th scope="col" class="px-6 py-3">
+                        Hrubá cena (PLN/m3):
+                       </th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                           C 8/10, X0, S3
+                       </td>
+                       <td class="px-6 py-4">
+                           290,00
+                       </td>
+                       <td class="px-6 py-4">
+                           356,7
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                           C 12/15, X0, S3
+                       </td>
+                       <td class="px-6 py-4">
+                           330,00	
+                       </td>
+                       <td class="px-6 py-4">
+                           405,90
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                           C 16/20, X0, S3
+                       </td>
+                       <td class="px-6 py-4">
+                           350,00
+                       </td>
+                       <td class="px-6 py-4">
+                           430,06
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                           C 20/25, X0, S3
+                       </td>
+                       <td class="px-6 py-4">
+                           365,00
+                       </td>
+                       <td class="px-6 py-4">
+                           448,95
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                           C 25/30, X0, S3
+                       </td>
+                       <td class="px-6 py-4">
+                           385,00
+                       </td>
+                       <td class="px-6 py-4">
+                           473,55
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                           C 30/37, XC1, S3
+                       </td>
+                       <td class="px-6 py-4">
+                           410,00
+                       </td>
+                       <td class="px-6 py-4">
+                           504,30
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Stabilizace 1,5-2,5 MPa (0/2)	
+                       </td>
+                       <td class="px-6 py-4">
+                           184,00
+                       </td>
+                       <td class="px-6 py-4">
+                           226,32
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Stabilizace 2,5-5 MPa (0/2)	
+                       </td>
+                       <td class="px-6 py-4">
+                           194,00	
+                       </td>
+                       <td class="px-6 py-4">
+                           238,62
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Stabilizace 2,5-5 MPa (0/2)	
+                       </td>
+                       <td class="px-6 py-4">
+                           194,00	
+                       </td>
+                       <td class="px-6 py-4">
+                           238,62
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Minomet M5	
+                       </td>
+                       <td class="px-6 py-4">
+                           350,00	
+                       </td>
+                       <td class="px-6 py-4">
+                           430,50
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Minomet M10	
+                       </td>
+                       <td class="px-6 py-4">
+                           390.00
+                       </td>
+                       <td class="px-6 py-4">
+                           479,70
+                       </td>
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+
+       <!-- tabelka 2 -->
+
+       <div class="relative overflow-x-auto pb-10">
+           <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+               
+                       <th scope="col" class="px-6 py-3">
+                        Vzdálenost:	
+                       </th>
+                       <th scope="col" class="px-6 py-3">
+                        Čistá cena (PLN/m3):
+                       </th>
+                       <th scope="col" class="px-6 py-3">
+                        Hrubá cena (PLN/m3):
+                       </th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Až 15 km
+                       </td>
+                       <td class="px-6 py-4">
+                           100,00
+                       </td>
+                       <td class="px-6 py-4">
+                           123,00
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Až 20 km
+                       </td>
+                       <td class="px-6 py-4">
+                           150,00	
+                       </td>
+                       <td class="px-6 py-4">
+                           184,50
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Až 30 km
+                       </td>
+                       <td class="px-6 py-4">
+                           250,00
+                       </td>
+                       <td class="px-6 py-4">
+                           307,50
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Až 40 km
+                       </td>
+                       <td class="px-6 py-4 colspan="2" ">
+                        Individuální ocenění
+                       </td>
+                       <td class="px-6 py-4">
+                        Individuální ocenění
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Hruška stojí hodinu
+                       </td>
+                       <td class="px-6 py-4">
+                           100,00
+                       </td>
+                       <td class="px-6 py-4">
+                           123,00
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Hodina nečinnosti čerpadla
+                       </td>
+                       <td class="px-6 py-4">
+                           150,00
+                       </td>
+                       <td class="px-6 py-4">
+                           184,50
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Provozní hodina čerpadla	
+                       </td>
+                       <td class="px-6 py-4">
+                           250,00
+                       </td>
+                       <td class="px-6 py-4">
+                           307,50
+                       </td>
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+
+           <!-- tabelka 3 -->
+
+       <div class="relative overflow-x-auto pb-10">
+           <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+               
+                       <th scope="col" class="px-6 py-3">
+                        Typ přidání:		
+                       </th>
+                       <th scope="col" class="px-6 py-3">
+                        Čistá cena (PLN/m3):
+                       </th>
+                       <th scope="col" class="px-6 py-3">
+                        Hrubá cena (PLN/m3):
+                       </th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Przeciwmrozowy:
+                       </td>
+                       <td class="px-6 py-4">
+                        Individuální ocenění
+                       </td>
+                       <td class="px-6 py-4">
+                        Individuální ocenění
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Nastavení retardéru:
+                       </td>
+                       <td class="px-6 py-4">
+                        Individuální ocenění	
+                       </td>
+                       <td class="px-6 py-4">
+                        Individuální ocenění
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Pro podlahy a hydrotechnický beton:
+                       </td>
+                       <td class="px-6 py-4">
+                        Individuální ocenění
+                       </td>
+                       <td class="px-6 py-4">
+                        Individuální ocenění
+                       </td>
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+       
+       <!-- tabelka 4 -->
+
+       <div class="relative overflow-x-auto pb-10">
+           <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+               
+                       <th scope="col" class="px-6 py-3">
+                        Typ čerpadla:	
+                       </th>
+                       <th scope="col" class="px-6 py-3">
+                        Čistá cena (PLN/m3):
+                       </th>
+                       <th scope="col" class="px-6 py-3">
+                        Hrubá cena (PLN/m3):
+                       </th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Čerpadlo 26m:
+                       </td>
+                       <td class="px-6 py-4">
+                           250,00
+                       </td>
+                       <td class="px-6 py-4">
+                           307,50
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Čerpadlo 36m:	
+                       </td>
+                       <td class="px-6 py-4">
+                           250,00
+                       </td>
+                       <td class="px-6 py-4">
+                           307,50
+                       </td>
+                   </tr>
+                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                       <td class="px-6 py-4">
+                        Čerpadlo (přístup/výstup):
+                       </td>
+                       <td class="px-6 py-4">
+                        1 hodina provozu daného typu čerpadla
+                       </td>
+                       <td class="px-6 py-4">
+                        1 hodina provozu daného typu čerpadla
+                       </td>
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+   </main> 
+
+
+                           <!-- footer -->
+
+       <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+           <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+               <div class="sm:flex sm:items-center sm:justify-between">
+                   <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                       <img src="logo.png" class="h-8" alt="Logo" />
+                       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FABAD-BETON</span>
+                   </a>
+                   <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                       <li>
+                           <a href="indexCZ.html" class="hover:underline me-4 md:me-6">Domovská stránka</a>
+                       </li>
+                       <li>
+                           <a href="index2CZ.html" class="hover:underline me-4 md:me-6">Nabídka</a>
+                       </li>
+                       <li>
+                           <a href="index3CZ.html" class="hover:underline">Kontakt</a>
+                       </li>
+                   </ul>
+               </div>
+               <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+               <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="indexCZ.html" class="hover:underline">FABAD-BETON™</a> Všechna práva vyhrazena.</span>
+           </div>
+       </footer>
+
+
+
+
+
+
+<script>
+   let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+   let themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+
+   if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+       themeToggleLightIcon.classList.remove('hidden');
+   } else {
+       themeToggleDarkIcon.classList.remove('hidden');
+   }
+
+   var themeToggleBtn = document.getElementById('theme-toggle');
+
+   themeToggleBtn.addEventListener('click', function() {
+
+
+       themeToggleDarkIcon.classList.toggle('hidden');
+       themeToggleLightIcon.classList.toggle('hidden');
+
+
+       if (localStorage.getItem('color-theme')) {
+           if (localStorage.getItem('color-theme') === 'light') {
+               document.documentElement.classList.add('dark');
+               localStorage.setItem('color-theme', 'dark');
+           } else {
+               document.documentElement.classList.remove('dark');
+               localStorage.setItem('color-theme', 'light');
+           }
+
+
+       } else {
+           if (document.documentElement.classList.contains('dark')) {
+               document.documentElement.classList.remove('dark');
+               localStorage.setItem('color-theme', 'light');
+           } else {
+               document.documentElement.classList.add('dark');
+               localStorage.setItem('color-theme', 'dark');
+           }
+       }
+       
+   });
+</script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer">        
+   </script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="script.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>  
+
+</body>
+</html>

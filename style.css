@@ -1,0 +1,53 @@
+body, *{
+    font-family: Roboto;
+}
+main #listaa
+{
+    padding-top: 15px;
+    padding-left: 30px;
+    list-style-type: square;
+    list-style-image: url("verified_16dp_75FB4C_FILL0_wght400_GRAD0_opsz20.svg");
+    list-style-position: outside;
+    list-style: square url("verified_16dp_75FB4C_FILL0_wght400_GRAD0_opsz20.svg") outside;
+}
+main ul li{
+    padding-top: 10px;
+}
+#cennik{
+    padding: 30px;
+    text-align: center;
+    font-size: 3rem;
+}
+#jazda{
+    padding: 30px;
+    text-align: center;
+    font-size: 3rem;
+}
+#map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 570px){
+    #cennik{
+        font-size: 2rem;
+    }
+    #jazda{
+        font-size: 2rem;
+    }
+}
+#language{
+    border-radius: 30px;
+}
+
+@media (max-width: 420px){
+    #cennik{
+        font-size: 1.8rem;
+    }
+    #jazda{
+        font-size: 1.8rem;
+    }
+}
+

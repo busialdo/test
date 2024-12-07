@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="description" content="Betoniarnia z siedzibą w Bogatynii, działająca na terenie powiatu zgorzeleckiego, oferuje szeroki zakres usług betoniarskich. W naszej ofercie znajdują się:
+    * Produkcja betonu - wytwarzamy beton towarowy dostosowany do różnych potrzeb budowlanych.
+    * Wylewanie betonu - realizujemy usługi wylewania betonu na miejscu budowy.
+    * Tworzenie konstrukcji betonowych - projektujemy i wykonujemy różnorodne konstrukcje z betonu.">
+    <meta name="keywords" content="beton, betoniarnia Bogatynia, mieszanka betonowa, betonowa konstrukcja, betonowy dach, betonowe schody, powiat zgorzelecki betonowanie, betoniarstwo, betoniarka, elementy betonowe, betonowanie fundamentów, wykonawstwo betonowe, usługi betoniarskie, produkcja betonu">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>FABAD-BETON</title>
+
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+    
+                    <!-- Nawigacja -->
+
+    <header>
+
+        <nav class="left-0 z-20 w-full bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-20">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="logo.png" class="h-12" alt="Logo" />
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">FABAD-BETON</span>
+            </a>
+
+        <div class="flex flex-wrap items-center justify-between mx-auto p-4">
+
+
+            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
+            
+
+            <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+                <span class="sr-only">otwórz</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+        </div>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Strona Główna</a>
+                </li>
+                <li>
+                    <a href="index2.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Oferta</a>
+                </li>
+                <li>
+                    <a href="index3.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Kontakt</a>
+                </li>
+                <li>
+                    <div>
+                        <select id="language" class="dark:text-gray-400 dark:bg-gray-700 dark:gray-600" onchange="location = this.value;">
+                            <option value="">język</option>
+                            <option value="index.html">Polski</option>
+                            <option value="indexCZ.html">Czeski</option>
+                        </select>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!--cały kontent -->
+
+    <main  class="container mx-auto p-4 z-0">
+
+        <section class="bg-white dark:bg-gray-900">
+            <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Profesjonalne Usługi Betoniarskie</h2>
+                    <p class="mb-4">Jako doświadczony zespół specjalistów w branży betoniarskiej, oferujemy naszym klientom kompleksowe i spersonalizowane rozwiązania dostosowane do indywidualnych potrzeb i wymagań. Nasze usługi obejmują szeroki zakres prac betoniarskich, od małych projektów remontowych po duże inwestycje budowlane.
+                        Stosujemy najlepsze surowce i składniki, aby zapewnić niezawodność i długowieczność naszych betonów. Oferujemy szeroką gamę betonów do różnych zastosowań, w tym:
+                    </p>
+
+                            <ul id="listaa" class="mb-1 text-xl tracking-tight font-extrabold text-gray-800 dark:text-white">
+                                <li>Budownictwo mieszkaniowe</li>
+                                <li>Budownictwo przemysłowe</li>
+                                <li>Budownictwo drogowe</li>
+                            </ul>
+                    
+                </div>
+                <div class="grid grid-cols-2 gap-4 mt-8">
+                    <img class="w-full rounded-lg" src="silos.jpg" alt="silos">
+                    <img class="mt-4 w-full lg:mt-10 rounded-lg" src="betoniarka1.jpg" alt="betoniarka">
+                </div>
+            </div>
+        </section>
+
+        <!-- dlaczego my -->
+
+    <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-center ">
+        <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800 items-center justify-center" id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
+            <li class="me-2 text-center">
+                <button id="about-tab" data-tabs-target="#dlaczegomy" type="button" role="tab" aria-controls="about" aria-selected="true" class="inline-block p-4 text-blue-600 rounded-ss-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500">Dlaczego my?</button>
+            </li>
+            <li class="me-2">
+                <button id="statistics-tab" data-tabs-target="#fakty" type="button" role="tab" aria-controls="statistics" aria-selected="false" class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">inne</button>
+            </li>
+        </ul>
+        <div id="defaultTabContent">
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="dlaczegomy" role="tabpanel" aria-labelledby="about-tab">
+                <h2 class="mb-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Bo stawiamy na jakość i profesjonalizm.</h2>
+                <p class="mb-3 text-gray-500 dark:text-gray-400 text-left">
+                    <strong>Indywidualne podejście:</strong>
+                    <br> 
+                    Każdy klient jest dla nas wyjątkowy, dlatego dostosowujemy nasze usługi do jego specyficznych potrzeb.
+                    <br><br>
+                    <strong>Wysoka jakość usług:</strong>
+                    <br>
+                     Stawiamy na najwyższą jakość i dokładność, aby zapewnić naszym klientom satysfakcję z naszych usług.
+                     <br><br>
+                     <strong>Atrakcyjne ceny:</strong>
+                    <br>
+                    Oferujemy konkurencyjne ceny, które są dostosowane do budżetu każdego klienta.
+                    <br><br>
+                    <strong>Spokój i pewność:</strong>
+                    <br> 
+                    Możesz być pewien, że Twoje zlecenie zostanie wykonane z należytą starannością i terminowo.</p>
+                
+            </div>
+            <div class="text-center hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="services" role="tabpanel" aria-labelledby="services-tab">
+            </div>
+            <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800 text-center" id="fakty" role="tabpanel" aria-labelledby="statistics-tab">
+                <dl class="grid justify-center items-center max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8 text-center">
+                    <div class="flex flex-col text-center">
+                        <dt class="mb-2 text-3xl font-extrabold">599+</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Zadowolonych klientów</dd>
+                    </div>
+                    <div class="flex flex-col">
+                        <dt class="mb-2 text-3xl font-extrabold">97%</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Klienci, którzy polecili nas dalej</dd>
+                    </div>
+                    <div class="flex flex-col">
+                        <dt class="mb-2 text-3xl font-extrabold">700+</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Łącznie zrobionych projektów</dd>
+                    </div>
+                    <div class="flex flex-col">
+                        <dt class="mb-2 text-3xl font-extrabold">Usługi</dt>
+                        <dd class="text-gray-500 dark:text-gray-400">Polska, Czechy, Niemcy</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+     </main>
+
+
+
+        <!-- footer -->
+
+        <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+            <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                        <img src="logo.png" class="h-8" alt="logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FABAD-BETON</span>
+                    </a>
+                    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                        <li>
+                            <a href="index.html" class="hover:underline me-4 md:me-6">Strona Główna</a>
+                        </li>
+                        <li>
+                            <a href="index2.html" class="hover:underline me-4 md:me-6">Oferta</a>
+                        </li>
+                        <li>
+                            <a href="index3.html" class="hover:underline">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="index.html" class="hover:underline">FABAD-BETON™</a> Wszelkie prawa zastrzeżone.</span>
+            </div>
+        </footer>
+
+
+        
+        <script>
+            // Pobieramy przycisk i menu rozwijane
+            const button = document.getElementById('language-button');
+            const dropdown = document.getElementById('language-dropdown');
+        
+            // Funkcja do otwierania/zamykania menu
+            button.addEventListener('click', () => {
+                dropdown.classList.toggle('hidden');  // Toggle visibility of the dropdown menu
+            });
+        
+            // Dodajemy nasłuchiwanie na kliknięcie poza menu, aby je zamknąć
+            window.addEventListener('click', (event) => {
+                if (!event.target.closest('.relative')) {
+                    dropdown.classList.add('hidden');  // Ukrywamy menu, jeśli klikniemy poza
+                }
+            });
+        </script>
+
+
+
+
+    <script>
+        let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        let themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        var themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+
+
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+
+
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+            
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer">        
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>  
+
+
+
+      
+</body>
+</html>

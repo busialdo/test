@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <title>FABAD-BETON</title>
+
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
+</head>
+<body class="bg-white dark:bg-gray-900">
+    
+                    <!-- Nawigacja -->
+
+                    <header>
+
+                        <nav class="left-0 z-20 w-full bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+                            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                                <img src="logo.png" class="h-12" alt="Logo" />
+                                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">FABAD-BETON</span>
+                            </a>
+                
+                        <div>
+                
+                            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5">
+                                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                            </button>
+                
+                            <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+                                <span class="sr-only">otwórz</span>
+                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                                </svg>
+                            </button>
+                        </div>
+                            <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                                <li>
+                                    <a href="index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Strona Główna</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Oferta</a>
+                                </li>
+                                <li>
+                                    <a href="index3.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent">Kontakt</a>
+                                </li>
+                                <li>
+                                    <div>
+                                        <select id="language" class="dark:text-gray-400 dark:bg-gray-700 dark:gray-600" onchange="location = this.value;">
+                                            <option value="">język</option>
+                                            <option value="index3.html">Polski</option>
+                                            <option value="index3CZ.html">Czeski</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </nav>
+                
+                    </header>
+
+                    <!-- Wszystkie Dane -->
+
+    <main id="kontakty">
+        <div class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
+            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
+                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">FABAD-BETON S.C.</h3>
+                    <p class="my-4">Z siedzibą w Bogatyni. Podstawowym profilem działalności firmy jest produkcja betonu i dostarczanie go do miejsca wybranego przez klienta. Od momentu powstania spółki priorytetami są najwyższa jakość dostarczanych usług i kontakt z klientem. Gwarantujemy terminowość dostawy, najwyższą jakość betonu i niezawodny kontakt. Właścicielami spółki są Adrian Słomiak i Fabian Szcześ.</p>
+                </blockquote>    
+            </figure>
+            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Adrian Słomiak, Fabian Szcześ</h3>
+                    <p class="my-4">E-mail: <a href="mailto:kontakt.fabadbeton@gmail.com">kontakt.fabadbeton@gmail.com</a><br>
+                        Telefon: 690 188 755<br>
+                        Adres: Lipowa 2, 59-916, Bogatynia</p>
+                </blockquote>  
+            </figure>
+            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
+                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Dane Firmy</h3>
+                    <p class="my-4">Dane Firmy:
+                        FABAD-BETON S.C<br>
+                        NIP: 6152068998<br>
+                        REGON: 523670595<br>
+                        ADRES: Lipowa 2, 59-916, Bogatynia</p>
+                </blockquote>    
+            </figure>
+            <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Media społecznościowe
+                    </h3>
+                    <p class="my-4 flex flex-col items-center justify-center"><a href="https://www.facebook.com/fabadbeton" target="_blank"><img src="social-network_15714742.png" alt="facebook" height="45px" width="45px"></a></p>
+                </blockquote> 
+            </figure>
+        </div>
+    
+            <!-- Mapa -->
+
+    <div id="jazda" class="text-gray-800 dark:text-gray-400"><h1>Zobacz jak do nas dojedziesz!</h1>
+    
+    </div>
+    <div id="map">
+        <iframe width="500px" height="300px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2513.4504329947235!2d14.902640400000003!3d50.952375800000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47092391005f703f%3A0x1b5edc1e9a4bd6e1!2sLipowa%202%2C%2059-916%20Bogatynia!5e0!3m2!1spl!2spl!4v1674802708163!5m2!1spl!2spl" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    </main>
+
+        <!-- footer -->
+
+    <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="logo.png" class="h-8" alt="logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">FABAD-BETON</span>
+                </a>
+                <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="index.html" class="hover:underline me-4 md:me-6">Strona Główna</a>
+                    </li>
+                    <li>
+                        <a href="index2.html" class="hover:underline me-4 md:me-6">Oferta</a>
+                    </li>
+                    <li>
+                        <a href="index3.html" class="hover:underline">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="index.html" class="hover:underline">FABAD-BETON™</a> Wszelkie prawa zastrzeżone.</span>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script>
+    let themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        let themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        var themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+
+
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+
+
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+            
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer">        
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+</body>
+</html>
